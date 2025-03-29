@@ -34,41 +34,44 @@ const DashBoard = () => {
     ],
   });
 
-  useEffect(() => {
+  const fetchOrders = () => {
     fetch("http://localhost:3000/orders")
       .then((res) => res.json())
       .then((orders) => {
+        // Lọc đơn hàng đã thanh toán (paymentStatus === 2)
         const paidOrders = orders.filter(
-          (order: { trang_thai_thanh_toan: number; }) => order.trang_thai_thanh_toan === 2
+          (order: { paymentStatus: number }) => order.paymentStatus === 2
         );
+  
+        // Lọc đơn hàng chưa xử lý (paymentStatus === 1)
         const unpaidOrders = orders.filter(
-          (order: { trang_thai_thanh_toan: number; }) => order.trang_thai_thanh_toan === 1
+          (order: { paymentStatus: number }) => order.paymentStatus === 1
         );
-
-        // 🔹 Tổng doanh thu (Fix lỗi NaN)
+  
+        // 🔹 Tính tổng doanh thu từ totalAmount
         const totalRevenue = paidOrders.reduce(
-          (sum: number, order: { price: unknown; }) => sum + (Number(order.price) || 0), // Đảm bảo giá trị là số
+          (sum: number, order: { totalAmount: any }) => sum + (Number(order.totalAmount) || 0),
           0
         );
         setRevenue(totalRevenue);
-
+  
         // 🔹 Tổng số đơn hàng đã bán
         setSoldOrders(paidOrders.length);
-
+  
         // 🔹 Số lượng hàng chưa xử lý
         setStock(unpaidOrders.length);
-
+  
         // 🔹 Doanh thu 5 ngày gần nhất
         const revenueByDate: Record<string, number> = {};
-        paidOrders.forEach((order: { orderDate: string; price: unknown; }) => {
+        paidOrders.forEach((order: { orderDate: string; totalAmount: any }) => {
           const date = order.orderDate.split("T")[0]; // Lấy phần ngày
-          revenueByDate[date] = (revenueByDate[date] || 0) + (Number(order.price) || 0);
+          revenueByDate[date] = (revenueByDate[date] || 0) + (Number(order.totalAmount) || 0);
         });
-
+  
         const sortedDates = Object.keys(revenueByDate)
           .sort((a, b) => new Date(a).getTime() - new Date(b).getTime())
           .slice(-5); // Lấy 5 ngày gần nhất
-
+  
         setChartData({
           labels: sortedDates,
           datasets: [
@@ -83,7 +86,13 @@ const DashBoard = () => {
         });
       })
       .catch((err) => console.error("Lỗi lấy danh sách đơn hàng:", err));
+  };
+  
+  // Gọi API khi component được render
+  useEffect(() => {
+    fetchOrders();
   }, []);
+  
 
   return (
     <div style={{ padding: 24 }}>
@@ -92,7 +101,7 @@ const DashBoard = () => {
           <Card>
             <Statistic
               title="Tổng Doanh Thu"
-              value={revenue.toLocaleString("vi-VN")} // Format số tiền VNĐ
+              value={revenue.toLocaleString("vi-VN")}
               suffix="VNĐ"
               prefix={<DollarCircleOutlined style={{ color: "#1890ff" }} />}
             />

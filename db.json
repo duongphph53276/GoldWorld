@@ -32,6 +32,160 @@
       "orderStatus": 1,
       "quantity": 3,
       "paymentStatus": 1
+    },
+    {
+      "id": 1743226869460,
+      "orderCode": "DH1743226869460",
+      "orderDate": "2025-03-29",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": 1,
+            "name": "Sản phẩm 1",
+            "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+            "price": 99999,
+            "description": "Áo thun cotton mềm mại, thoáng mát.",
+            "categoryId": 1,
+            "inStock": true
+          },
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 79999.2,
+      "discountCode": "save20",
+      "discountAmount": 19999.8
+    },
+    {
+      "id": 1743227171113,
+      "orderCode": "DH1743227171113",
+      "orderDate": "2025-03-29",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": 2,
+            "name": "Sản phẩm 2",
+            "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+            "price": 200000,
+            "description": "Áo thun cotton mềm mại, thoáng mát.",
+            "categoryId": 1,
+            "inStock": true
+          },
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 200000,
+      "discountCode": "Không sử dụng",
+      "discountAmount": 0
+    },
+    {
+      "id": 1743227941533,
+      "orderCode": "DH1743227941533",
+      "orderDate": "2025-03-29",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": 2,
+            "name": "Sản phẩm 2",
+            "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+            "price": 200000,
+            "description": "Áo thun cotton mềm mại, thoáng mát.",
+            "categoryId": 1,
+            "inStock": true
+          },
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 200000,
+      "discountCode": "Không sử dụng",
+      "discountAmount": 0
+    },
+    {
+      "id": 1743228414161,
+      "orderCode": "DH1743228414161",
+      "orderDate": "2025-03-29",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": 1,
+            "name": "Sản phẩm 1",
+            "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+            "price": 99999,
+            "description": "Áo thun cotton mềm mại, thoáng mát.",
+            "categoryId": 1,
+            "inStock": true
+          },
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 99999,
+      "discountCode": "Không sử dụng",
+      "discountAmount": 0
+    },
+    {
+      "id": 1743228982237,
+      "orderCode": "DH1743228982237",
+      "orderDate": "2025-03-29",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": 1,
+            "name": "Sản phẩm 1",
+            "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+            "price": 99999,
+            "description": "Áo thun cotton mềm mại, thoáng mát.",
+            "categoryId": 1,
+            "inStock": true
+          },
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 179998.2,
+      "discountCode": "save10",
+      "discountAmount": 19999.8
+    },
+    {
+      "id": 1743229362439,
+      "orderCode": "DH1743229362439",
+      "orderDate": "2025-03-29",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "name": "abc",
+            "image": "https://sieuthidaisymart.com/wp-content/uploads/2024/12/blindbox-tui-mu-Baby-Three-400-7.jpg",
+            "price": 123,
+            "id": 7,
+            "description": "Áo thun cotton mềm mại, thoáng mát."
+          },
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 123,
+      "discountCode": "Không sử dụng",
+      "discountAmount": 0
     }
   ],
   "new_product": [
@@ -168,10 +322,6 @@
       "price": 12323122,
       "id": 10
     }
-
-
-   
-   
   ],
   "categories": [
     {

@@ -88,7 +88,7 @@ const SidebarAdmin = () => {
           </Dropdown>
         </Menu.Item>
         <Menu.Item key="3" className="font-bold">
-          <a href="/admin/cart">
+          <a href="/admin/order">
             <Button type="text">
               Quản lý đơn hàng  
             </Button>
