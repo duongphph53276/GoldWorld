@@ -208,15 +208,6 @@
       "inStock": true
     },
     {
-      "id": 3,
-      "name": "Sản phẩm 1",
-      "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
-      "price": 99999,
-      "description": "Áo thun cotton mềm mại, thoáng mát.",
-      "categoryId": 3,
-      "inStock": true
-    },
-    {
       "id": 4,
       "name": "Sản phẩm 1",
       "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
@@ -454,5 +445,19 @@
       "lockUntil": "2026-03-15T05:34:01.009Z"
     }
   ],
-  "order": []
+  "cart": [
+    {
+      "product": {
+        "id": 2,
+        "name": "Sản phẩm 2",
+        "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+        "price": 200000,
+        "description": "Áo thun cotton mềm mại, thoáng mát.",
+        "categoryId": 1,
+        "inStock": true
+      },
+      "quantity": 2,
+      "id": 1
+    }
+  ]
 }
