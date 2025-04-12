@@ -1,28 +1,6 @@
 {
   "orders": [
     {
-      "id": 1,
-      "orderCode": "ORD123456",
-      "orderDate": "2025-03-20T10:30:00Z",
-      "paymentMethod": 2,
-      "trang_thai_thanh_toan": 2,
-      "price": 30000,
-      "orderStatus": 2,
-      "quantity": 2,
-      "paymentStatus": 2
-    },
-    {
-      "id": 2,
-      "orderCode": "ORD123457",
-      "orderDate": "2025-03-19T15:45:00Z",
-      "paymentMethod": 2,
-      "trang_thai_thanh_toan": 2,
-      "price": 40000,
-      "orderStatus": 2,
-      "quantity": 1,
-      "paymentStatus": 2
-    },
-    {
       "id": 3,
       "orderCode": "ORD123458",
       "orderDate": "2025-03-18T09:20:00Z",
@@ -31,14 +9,14 @@
       "price": 5000,
       "orderStatus": 1,
       "quantity": 3,
-      "paymentStatus": 1
+      "paymentStatus": 2
     },
     {
       "id": 1743226869460,
       "orderCode": "DH1743226869460",
       "orderDate": "2025-03-29",
       "paymentMethod": 2,
-      "paymentStatus": 1,
+      "paymentStatus": 2,
       "orderStatus": 1,
       "userId": 1,
       "items": [
@@ -64,7 +42,7 @@
       "orderCode": "DH1743227171113",
       "orderDate": "2025-03-29",
       "paymentMethod": 2,
-      "paymentStatus": 1,
+      "paymentStatus": 2,
       "orderStatus": 1,
       "userId": 1,
       "items": [
@@ -90,7 +68,7 @@
       "orderCode": "DH1743227941533",
       "orderDate": "2025-03-29",
       "paymentMethod": 2,
-      "paymentStatus": 1,
+      "paymentStatus": 2,
       "orderStatus": 1,
       "userId": 1,
       "items": [
@@ -116,7 +94,7 @@
       "orderCode": "DH1743228414161",
       "orderDate": "2025-03-29",
       "paymentMethod": 2,
-      "paymentStatus": 1,
+      "paymentStatus": 2,
       "orderStatus": 1,
       "userId": 1,
       "items": [
@@ -169,7 +147,7 @@
       "orderDate": "2025-03-29",
       "paymentMethod": 2,
       "paymentStatus": 1,
-      "orderStatus": 1,
+      "orderStatus": 2,
       "userId": 1,
       "items": [
         {
@@ -184,6 +162,43 @@
         }
       ],
       "totalAmount": 123,
+      "discountCode": "Không sử dụng",
+      "discountAmount": 0
+    },
+    {
+      "id": 1744434564904,
+      "orderCode": "DH1744434564904",
+      "orderDate": "2025-04-12",
+      "paymentMethod": 2,
+      "paymentStatus": 1,
+      "orderStatus": 1,
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": 2,
+            "name": "Sản phẩm 2",
+            "image": "https://img.pikbest.com/png-images/20241025/cute-robot-clipart-illustration-png_11003024.png!sw800",
+            "price": 200000,
+            "description": "Áo thun cotton mềm mại, thoáng mát.",
+            "categoryId": 1,
+            "inStock": true
+          },
+          "quantity": 2,
+          "id": 1
+        },
+        {
+          "product": {
+            "name": "abcdef",
+            "image": "https://sieuthidaisymart.com/wp-content/uploads/2024/12/blindbox-tui-mu-Baby-Three-400-8.jpg",
+            "price": 12323122,
+            "id": 10
+          },
+          "quantity": 1,
+          "id": 2
+        }
+      ],
+      "totalAmount": 12723122,
       "discountCode": "Không sử dụng",
       "discountAmount": 0
     }
@@ -458,6 +473,16 @@
       },
       "quantity": 2,
       "id": 1
+    },
+    {
+      "product": {
+        "name": "abcdef",
+        "image": "https://sieuthidaisymart.com/wp-content/uploads/2024/12/blindbox-tui-mu-Baby-Three-400-8.jpg",
+        "price": 12323122,
+        "id": 10
+      },
+      "quantity": 1,
+      "id": 2
     }
   ]
 }

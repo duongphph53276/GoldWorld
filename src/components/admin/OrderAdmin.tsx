@@ -41,7 +41,7 @@ const colorMap: Record<OrderStatus, string> = {
 };
 
 const getStatusTag = (status: number) => {
-  const orderStatus = status as OrderStatus; // Ép kiểu vì chúng ta biết status chỉ có thể là 1-7
+  const orderStatus = status as OrderStatus; 
   return <Tag color={colorMap[orderStatus]}>{orderStatusMap[orderStatus]}</Tag>;
 };
 

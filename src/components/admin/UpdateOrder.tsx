@@ -28,6 +28,26 @@ const UpdateOrder: React.FC = () => {
     message.success("Cập nhật đơn hàng thành công!");
     navigate("/admin/order");
   };
+  const updatePaymentStatus = async (orderId: number, newStatus: number) => {
+    try {
+      const res = await fetch(`http://localhost:3000/orders/${orderId}`, {
+        method: "PATCH", // hoặc "PUT"
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ paymentStatus: newStatus }),
+      });
+  
+      if (!res.ok) throw new Error("Cập nhật thất bại");
+  
+      const updatedOrder = await res.json();
+      console.log("Cập nhật thành công:", updatedOrder);
+      // Nếu cần, gọi lại fetchOrders() để cập nhật UI
+    } catch (error) {
+      console.error("Lỗi khi cập nhật trạng thái thanh toán:", error);
+    }
+  };
+  
 
   return (
     <div style={{ padding: 24 }}>
@@ -68,7 +88,7 @@ const UpdateOrder: React.FC = () => {
             </Select>
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" onClick={() => updatePaymentStatus(formData.id, formData.paymentStatus)}>
               Lưu thay đổi
             </Button>
           </Form.Item>
